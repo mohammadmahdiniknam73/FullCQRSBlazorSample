@@ -18,10 +18,10 @@ namespace Domain.Entities.Orders
             Price = price;
         }
 
-        public OrderDetailsId Id { get; set; }
-        public ProductId ProductId { get; set; }
-        public OrderId OrderId { get; set; }
-        public Money Price { get; set; }
+        public OrderDetailsId Id { get; private set; }
+        public ProductId ProductId { get; private set; }
+        public OrderId OrderId { get; private set; }
+        public Money Price { get; private set; }
 
     }
 }

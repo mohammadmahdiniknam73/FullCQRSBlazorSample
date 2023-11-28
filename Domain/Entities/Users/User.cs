@@ -10,21 +10,21 @@ namespace Domain.Entities.Users
 {
     public class User
     {
-        public UserId Id { get; set; }
-        public string Name { get; set; } = string.Empty;
-        public string SirName { get; set; } = string.Empty;
+        public UserId Id { get; private set; }
+        public string Name { get; private set; } = string.Empty;
+        public string SirName { get; private set; } = string.Empty;
 
 
-        public string UserName { get; set; } = string.Empty;
-        public string Email { get; set; } = string.Empty;
-        public string PhoneNumber { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
+        public string UserName { get; private set; } = string.Empty;
+        public string Email { get; private set; } = string.Empty;
+        public string PhoneNumber { get; private set; } = string.Empty;
+        public string Password { get; private set; } = string.Empty;
 
-        public bool IsAvailable { get; set; }
-        public DateOnly DateCreated { get; set; }
-        public TimeOnly TimeCreated { get; set; }
+        public bool IsAvailable { get; private set; }
+        public DateOnly DateCreated { get; private set; }
+        public TimeOnly TimeCreated { get; private set; }
 
-        public Role Role { get; set; }
+        public Role Role { get; private set; }
         
     }
 }

@@ -17,8 +17,8 @@ namespace Domain.Entities.Orders
 
         }
 
-        public OrderId Id { get; set; }
-        public UserId UserId { get; set; }
+        public OrderId Id { get; private set; }
+        public UserId UserId { get; private set; }
 
         public static Order Create(User user)
         {
