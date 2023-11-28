@@ -1,10 +1,5 @@
 ﻿using Domain.Entities.Catagorys;
-using Domain.Entities.Users;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Domain.Entities.Orders;
 
 namespace Domain.Entities.Products
 {
@@ -19,6 +14,6 @@ namespace Domain.Entities.Products
         public Sku Sku { get; private set; }
 
         public ICollection<Catagory> Catagories { get; private set; }
-
+        public OrderDetails OrderDetails { get; set; }
     }
 }

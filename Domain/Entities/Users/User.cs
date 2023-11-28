@@ -1,10 +1,6 @@
-﻿using Domain.Entities.Products;
+﻿using Domain.Entities.Orders;
 using Domain.Entities.Roles;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Domain.Entities.Users
 {
@@ -25,6 +21,6 @@ namespace Domain.Entities.Users
         public TimeOnly TimeCreated { get; private set; }
 
         public Role Role { get; private set; }
-        
+        public ICollection<Order> Orders { get; set; }
     }
 }

@@ -1,9 +1,4 @@
 ﻿using Domain.Entities.Products;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Entities.Orders
 {
@@ -22,6 +17,9 @@ namespace Domain.Entities.Orders
         public ProductId ProductId { get; private set; }
         public OrderId OrderId { get; private set; }
         public Money Price { get; private set; }
+
+        public Order Order { get; set; }
+        public ICollection<Product> Products { get; set; }
 
     }
 }
