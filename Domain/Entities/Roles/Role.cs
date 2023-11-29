@@ -2,7 +2,7 @@
 
 namespace Domain.Entities.Roles
 {
-    public class Role
+    public class Role 
     {
         public Role(RoleId id, string roleName)
         {

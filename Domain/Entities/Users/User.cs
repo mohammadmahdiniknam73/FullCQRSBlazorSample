@@ -4,7 +4,7 @@ using Domain.Entities.Roles;
 
 namespace Domain.Entities.Users
 {
-    public class User
+    public class User 
     {
         public User(UserId id, string name, string sirName, string userName, string email, string phoneNumber, string password, bool isAvailable, DateOnly dateCreated, TimeOnly timeCreated)
         {
