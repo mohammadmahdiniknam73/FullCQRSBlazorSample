@@ -1,5 +1,5 @@
 ﻿using Domain.Entities.Catagorys;
-using Domain.Entities.Orders;
+using Domain.Entities.OrderDetails;
 
 namespace Domain.Entities.Products
 {
@@ -25,6 +25,6 @@ namespace Domain.Entities.Products
         public Sku Sku { get; private set; }
 
         public ICollection<Catagory> Catagories { get; private set; }
-        public OrderDetails OrderDetails { get; set; }
+        public OrderDetail OrderDetail { get; set; }
     }
 }

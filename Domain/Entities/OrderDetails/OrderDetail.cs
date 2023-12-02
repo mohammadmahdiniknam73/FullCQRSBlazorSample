@@ -1,11 +1,12 @@
-﻿using Domain.Entities.Products;
+﻿using Domain.Entities.Orders;
+using Domain.Entities.Products;
 
-namespace Domain.Entities.Orders
+namespace Domain.Entities.OrderDetails
 {
-    public class OrderDetails
+    public class OrderDetail
     {
 
-        internal OrderDetails(OrderDetailsId id, OrderId orderId, ProductId productId, Money price)
+        internal OrderDetail(OrderDetailId id, OrderId orderId, ProductId productId, Money price)
         {
             Id = id;
             OrderId = orderId;
@@ -13,7 +14,7 @@ namespace Domain.Entities.Orders
             Price = price;
         }
 
-        public OrderDetailsId Id { get; private set; }
+        public OrderDetailId Id { get; private set; }
         public ProductId ProductId { get; private set; }
         public OrderId OrderId { get; private set; }
         public Money Price { get; private set; }

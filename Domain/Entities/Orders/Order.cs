@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Products;
+﻿using Domain.Entities.OrderDetails;
+using Domain.Entities.Products;
 using Domain.Entities.Users;
 
 
@@ -6,7 +7,7 @@ namespace Domain.Entities.Orders
 {
     public class Order
     {
-        private readonly HashSet<OrderDetails> _orderDetails = new();
+        private readonly HashSet<OrderDetail> _orderDetail = new();
 
         private Order()
         {
@@ -17,7 +18,7 @@ namespace Domain.Entities.Orders
         public UserId UserId { get; private set; }
 
         public User User { get; set; }
-        public OrderDetails OrderDetails { get; set; }
+        public OrderDetail OrderDetail { get; set; }
 
         public static Order Create(User user)
         {
@@ -31,13 +32,13 @@ namespace Domain.Entities.Orders
         }
         public void Add(ProductId productId, Money price)
         {
-            var orderDetail = new OrderDetails(
-                new OrderDetailsId(Guid.NewGuid()),
+            var orderDetail = new OrderDetail(
+                new OrderDetailId(Guid.NewGuid()),
                 Id,
                 productId,
                 price);
 
-            _orderDetails.Add(orderDetail);
+            _orderDetail.Add(orderDetail);
         }
     }
 }
